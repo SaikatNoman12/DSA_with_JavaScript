@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traversing and Accessing</title>
+
+    <script>
+      const data = [11, 22, 33, 44, 55, 66, 77, 88, 99, 10];
+
+      // Make html page write basic array:-
+      document.write(`Array ${data}`);
+
+      // Traversing  with loop:-
+      for (let i = 0; i < data.length; i++) {
+        document.write(`Array ${i < 10 ? "0" + i : i} is  ${data[i]} <br>`);
+      }
+
+      // Access element with text input and button:-
+      function onAccessElement() {
+        const inputText = document.getElementById("input").value;
+        if (
+          inputText < data.length &&
+          inputText > 0 &&
+          typeof parseInt(inputText) === "number"
+        ) {
+          alert(data[inputText]);
+        } else {
+          alert("Please enter valid number");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <br />
+    <input type="text" id="input" placeholder="enter number value" />
+    <button type="button" onclick="onAccessElement()">Access Element</button>
+  </body>
+</html>
