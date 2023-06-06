@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inserting</title>
+
+    <script>
+      const data = [1, 22, 33, 44, 55, 66, 77, 88, 99];
+      const position = 3;
+      const ele = 30300;
+
+      // how to work splice method:-
+      for (let i = data.length - 1; i >= 0; i--) {
+        if (i >= position) {
+          data[i + 1] = data[i];
+          if (i === position) {
+            data[i] = ele;
+          }
+        }
+      }
+      console.log(data);
+
+      // splice method:-
+      data.splice(3, 0, 40000);
+      console.log(data);
+
+      const secondData = [1, 22, 33, 44, 55, 66, 77, 88, 99];
+      function onClick() {
+        const showData = document.getElementById("showData");
+        const index = document.getElementById("index").value;
+        const ele = document.getElementById("ele").value;
+
+        if (
+          index > 0 &&
+          index < secondData.length &&
+          typeof parseInt(index) === "number" &&
+          ele.trim() !== ""
+        ) {
+          for (let i = secondData.length - 1; i >= 0; i--) {
+            if (i >= index) {
+              secondData[i + 1] = secondData[i];
+              if (i === parseInt(index)) {
+                secondData[i] = Number(ele);
+              }
+            }
+          }
+        } else {
+          alert("Please enter position index");
+        }
+
+        showData.innerHTML = secondData.join(",");
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="index" placeholder="index" />
+    <input type="text" id="ele" placeholder="data" />
+    <button type="button" onclick="onClick()">Submit</button>
+    <br />
+    <h1 id="showData"></h1>
+  </body>
+</html>

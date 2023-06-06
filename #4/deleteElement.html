@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Element</title>
+
+    <script>
+      const data = [20, 30, 40, 50, 60, 70];
+      const position = 5;
+
+      for (let i = position; i < data.length - 1; i++) {
+        data[i] = data[i + 1];
+      }
+      data.length = data.length - 1;
+      console.log(data);
+
+      function onDelete() {
+        const deleteDataPosition = document.getElementById("delete").value;
+        const secondData = [20, 30, 40, 50, 60, 70];
+
+        if (
+          parseInt(deleteDataPosition) > 0 &&
+          parseInt(deleteDataPosition) < secondData.length &&
+          typeof parseInt(deleteDataPosition) === "number"
+        ) {
+          for (let i = deleteDataPosition; i < secondData.length - 1; i++) {
+            secondData[i] = secondData[i + 1];
+            // if (secondData.length - (deleteDataPosition - 1) === i) {
+            //   secondData.length = secondData.length - 1;
+            // }
+          }
+          secondData.length = secondData.length - 1;
+          console.log(secondData);
+        } else {
+          alert("enter valid number");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="delete" placeholder="enter number" />
+    <button type="button" onclick="onDelete()">Delete Data</button>
+  </body>
+</html>
