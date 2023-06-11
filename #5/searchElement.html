@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Element</title>
+
+    <script>
+      //static;
+      const data = [100, 200, 44, 400, 50, 44, 55, 22, 44, 23, 54];
+      const item = 200;
+      let index = undefined;
+
+      for (let i = 0; i < data.length; i++) {
+        if (item === data[i]) {
+          index = i;
+          break;
+        }
+      }
+
+      if (index) {
+        /* console.log(data[index]); */
+      } else {
+        /* console.log("No search value."); */
+      }
+
+      const list = data.filter((ele) => {
+        // return ele === 44;
+        /* return value [44,44,44] */
+        return ele.toString().indexOf(4) > -1;
+        /* return [44, 400, 44, 44, 54] */
+      });
+
+      // shortcut:-
+      // console.log(data[data.indexOf(200)]);
+
+      function dataGet() {
+        const data = [100, 200, 44, 400, 50, 44, 55, 22, 44, 23, 54];
+        const input = document.getElementById("inputId").value;
+        let inData = undefined;
+
+        if (input.match(/^[0-9]*$/)) {
+          for (let i = 0; i < data.length; i++) {
+            if (data[i] === Number(input)) {
+              inData = data[i];
+              break;
+            }
+          }
+          inData = inData ? inData : "Sorry do find any value";
+          console.log(inData);
+        } else {
+          alert("plz enter number.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input class="value" type="text" id="inputId" />
+    <button onclick="dataGet()" type="button">Submit</button>
+  </body>
+</html>

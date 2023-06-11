@@ -20,3 +20,12 @@
 - Make array define the position.
 - Use loop delete array element.
 - Delete element with text input and button.
+
+## Search Element in Array (Linear search):-
+
+- Understand case and solution with white brand.
+- Make array.
+- Use loop to Search Element.
+- Search Element with text input and button.
+  - Shortcut for Search element (default function).
+  - Shortcut for delete element (default function).
