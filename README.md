@@ -29,3 +29,18 @@
 - Search Element with text input and button.
   - Shortcut for Search element (default function).
   - Shortcut for delete element (default function).
+
+## Marge Two Array
+
+- Understand case and solution with whiteboard.
+- Make three arrays.
+- Use 2 different loop to merge element.
+  - Shortcut for Reverse array element (Default Function).
+  - Shortcut for merge array (Default Function).
+
+## Merge Two Array (While Loop)
+
+- Understand case and solution with whiteboard.
+- Make three arrays.
+- Use while loop and merge element.
+  - Compare this logic last one (Marge Two Array).
