@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recursion</title>
+
+    <script>
+      function recursion(data) {
+        if (data <= 5) {
+          console.log(data++);
+          recursion(data);
+        }
+      }
+      recursion(0);
+
+      function recFactorial(data) {
+        if (data === 0) {
+          return 1;
+        }
+        return data * recFactorial(data - 1);
+      }
+
+      console.log(recFactorial(5));
+    </script>
+  </head>
+  <body></body>
+</html>

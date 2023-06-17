@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Sorting</title>
+
+    <script>
+      let data = [10, 4432, 100, 200, 50, 12, 30, 40, 10];
+      // let data = [1, 2, 3, 4, 5, 6];
+
+      for (let i = 1; i < data.length; i++) {
+        let flag = 0;
+        for (let j = 0; j < data.length - i; j++) {
+          if (data[j] > data[j + 1]) {
+            let temp = data[j];
+            data[j] = data[j + 1];
+            data[j + 1] = temp;
+            flag = 1;
+          }
+        }
+        if (!flag) {
+          break;
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
